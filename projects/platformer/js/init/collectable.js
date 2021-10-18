@@ -36,7 +36,7 @@
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
-        createCollectable(type.db,760,620);
+        createCollectable(type.db,850,620);
         createCollectable(type.steve,225,290);
         createCollectable(type.max,80,300);
         
