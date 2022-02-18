@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taco Shop</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #menu, #take-order {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #take-order > p {
+                padding-right: 10px;
+            }
+
+            .menu-item {
+                border: 3px solid gray;
+            }
+
+            .menu-item > h4,
+            .menu-item > img {
+                padding: 10px;
+                padding-bottom: 5px;
+            }
+
+            img {
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="all-contents">
+            <nav>
+                <h1>Taco Shop</h1>
+                <div id="take-order">
+                    <p>When you're ready to place your order, click here: </p>
+                    <button>Place Order</button>
+                </div>
+            </nav>
+            <main>
+                <h3>Menu</h3>
+                <div id="menu">
+                    <div id="three-tacos" class="menu-item">
+                        <h4> #1 - Three Tacos</h4>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-phbs_RqH7HoN_2XLKiTXd0zTOeMGLncug&usqp=CAU">
+                        <h4>6.o9</h4>
+                    </div>
+                    <div id="five-tacos" class="menu-item">
+                        <h4>#2 - Five Tacos</h4>
+                        <img src="https://i2.wp.com/thesuburbansoapbox.com/wp-content/uploads/2021/02/Birria-Tacos-8.jpg">
+                        <h4>9.99</h4>
+                    </div>
+                    <div id="taco-flavored-taco" class="menu-item">
+                        <h4>#3 - Tacos flavored taco</h4>
+                        <img src="https://th.bing.com/th/id/R.4ef9467e6a135fa9d5abd0b6a5264713?rik=hewKjXNoBoavXg&riu=http%3a%2f%2fwww.captainfussybuckets.com%2fwp-content%2fuploads%2f2012%2f10%2fBeefTacoCrispy-copy.png&ehk=waWGU1BtWtuOGOw19X7ImJ1tRz4dHamSMZFpoi6%2fSJU%3d&risl=&pid=ImgRaw&r=0">
+                        <h4>5.36</h4>
+                    </div>
+                    <div id="tacos-taco" class="menu-item">
+                        <h4>#4 - Tacos Taco</h4>
+                        <img src="https://th.bing.com/th/id/R.9ecb3dfe555f512ae38a00799b4dfc9d?rik=M8nN1Zr3OpABUw&riu=http%3a%2f%2fimg.sndimg.com%2ffood%2fimage%2fupload%2fw_614%2ch_461%2cc_fit%2fv1%2fimg%2frecipes%2f22%2f55%2f22%2fpicbEtGKT.jpg&ehk=%2fgIL6%2f5OGJtqJ%2f0YmZf1dGZRTcEs6nwaeN8PSxMJ%2bpg%3d&risl=&pid=ImgRaw&r=0">
+                        <h4>99.99</h4>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+          function takeOrder(){
+            $('button').on('click', takeOrder);
+            console.log("you clicked it :(")
+                var total = 0;
+                var orderNumber = prompt("What food would you like?");
+
+          } 
+
+         if (orderNumber === '1') {
+         total += 6.09;
+         } else if (orderNumber === '2') {
+            total += 9.99;
+            }
+            else if (orderNumber === '3') {
+            total += 5.36;
+            }
+            else if (orderNumber === '4') {
+            total += 99.99;
+            }
+             else {
+            alert('Sorry, you entered an incorrect combo number'); // Let's the user know that they incorrectly entered information
+            }
+        alert('your total is'+ total);      
+        </script>
+    </body>
+</html>
